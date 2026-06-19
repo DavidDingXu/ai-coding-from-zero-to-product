@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AI 产品简报生成器</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="intro">
+        <p class="badge">第一个 AI 编程小产品</p>
+        <h1>把一个模糊想法整理成 AI 编程工具能执行的产品简报</h1>
+        <p class="lead">输入你的产品想法、目标用户和核心功能，生成一份可以继续交给 Codex App 使用的简报和提示词。</p>
+      </section>
+
+      <section class="workspace">
+        <form id="brief-form" class="panel">
+          <label>
+            产品想法
+            <textarea name="idea" rows="3" required placeholder="例如：做一个给上班族用的个人效率计划工具"></textarea>
+          </label>
+
+          <label>
+            目标用户
+            <input name="audience" placeholder="例如：上班族、产品经理、运营人员">
+          </label>
+
+          <label>
+            核心功能
+            <textarea name="coreFeatures" rows="3" placeholder="例如：记录任务和日程，按优先级排序，标记完成状态"></textarea>
+          </label>
+
+          <label>
+            体验风格
+            <input name="style" placeholder="例如：清爽，适合长时间使用">
+          </label>
+
+          <label>
+            限制条件
+            <input name="constraints" placeholder="例如：先做本地单页版本，不接后端">
+          </label>
+
+          <div class="actions">
+            <button type="submit">生成简报</button>
+            <button id="copy-prompt" type="button" disabled>复制提示词</button>
+          </div>
+        </form>
+
+        <div id="output" class="output">
+          <p class="empty">填写左侧表单后，这里会生成产品简报和给 AI 编程工具的提示词。</p>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>

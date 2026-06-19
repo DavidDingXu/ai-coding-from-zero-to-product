@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI 个人效率助手轻量后端</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="workspace">
+        <header class="hero">
+          <div>
+            <p class="eyebrow">AI 个人效率助手 · Light Backend</p>
+            <h1>从本地 Demo 走到可登录、可保存、可控权限的产品</h1>
+            <p>当前是本地后端 MVP：用内存数据模拟数据库，用 demo session 模拟登录，用权限函数控制草稿保存和查询。</p>
+          </div>
+          <div class="session-box">
+            <span>当前会话</span>
+            <strong id="sessionStatus"></strong>
+          </div>
+        </header>
+
+        <section class="grid">
+          <article class="panel">
+            <h2>什么时候需要后端</h2>
+            <ul id="decisionList" class="decision-list"></ul>
+          </article>
+
+          <article class="panel">
+            <h2>保存一条计划草稿</h2>
+            <label>
+              标题
+              <input id="titleInput" value="今天 90 分钟先处理哪三件事" />
+            </label>
+            <label>
+              摘要
+              <textarea id="summaryInput">用 AI 个人效率助手说明数据库、登录、权限和审计什么时候进入产品。</textarea>
+            </label>
+            <button id="saveButton" type="button">保存草稿</button>
+            <div id="draftList" class="draft-list"></div>
+          </article>
+        </section>
+
+        <section class="grid bottom">
+          <article class="panel wide">
+            <h2>权限矩阵</h2>
+            <div class="table-wrap">
+              <table id="permissionTable"></table>
+            </div>
+          </article>
+
+          <article class="panel warning">
+            <h2>生产级缺口</h2>
+            <ul id="gapList"></ul>
+          </article>
+        </section>
+      </section>
+    </main>
+
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>

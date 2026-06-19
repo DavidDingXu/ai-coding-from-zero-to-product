@@ -1,0 +1,18 @@
+{
+  "name": "commercialization",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "description": "AI 个人效率助手商业化入门：账号、额度、token 成本和支付前置账本。",
+  "scripts": {
+    "test": "node --test",
+    "brief": "node src/cli.js --mode brief",
+    "plans": "node src/cli.js --mode plans",
+    "usage": "node src/cli.js --mode usage",
+    "meter": "node src/cli.js --mode meter",
+    "invoice": "node src/cli.js --mode invoice",
+    "audit": "node src/cli.js --mode audit",
+    "checklist": "node src/cli.js --mode checklist",
+    "prompt": "node src/cli.js --mode prompt"
+  }
+}

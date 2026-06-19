@@ -1,0 +1,20 @@
+{
+  "name": "deployment",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "description": "AI 个人效率助手部署实战：平台选择、环境变量、预览发布、健康检查和回滚 runbook。",
+  "scripts": {
+    "test": "node --test",
+    "brief": "node src/cli.js --mode brief",
+    "platforms": "node src/cli.js --mode platforms",
+    "choose": "node src/cli.js --mode choose",
+    "runbook": "node src/cli.js --mode runbook",
+    "commands": "node src/cli.js --mode commands",
+    "audit": "node src/cli.js --mode audit",
+    "evidence": "node src/cli.js --mode evidence",
+    "smoke": "node src/cli.js --mode smoke",
+    "rollback": "node src/cli.js --mode rollback",
+    "prompt": "node src/cli.js --mode prompt"
+  }
+}

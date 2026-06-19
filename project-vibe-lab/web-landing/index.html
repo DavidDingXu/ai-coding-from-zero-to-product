@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI 个人效率助手</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark">效</span>
+        <span>AI 个人效率助手</span>
+      </div>
+      <nav aria-label="页面导航">
+        <a href="#flow">流程</a>
+        <a href="#waitlist">候补</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">给学生、上班族、产品经理、运营人员和独立开发者</p>
+          <h1 data-hero-title>把任务、日程、笔记和账目整理成今天能执行的计划</h1>
+          <p data-hero-subtitle>
+            输入今天要做的事、固定日程、读书笔记和零散账目，先得到可筛选行动卡，再决定先做什么、延后什么、需要补哪些信息。
+          </p>
+          <div class="hero-actions">
+            <a class="primary-link" href="#waitlist">加入候补名单</a>
+            <a class="secondary-link" href="#flow">查看流程</a>
+          </div>
+        </div>
+        <aside class="product-panel" aria-label="产品能力预览">
+          <div class="panel-header">
+            <span>示例输入</span>
+            <strong>工作日 / 90 分钟可用时间</strong>
+          </div>
+          <div class="scenario-list">
+            <article>
+              <span>01</span>
+              <p>10:00 前整理项目周会材料</p>
+            </article>
+            <article>
+              <span>02</span>
+              <p>午休前补完《AI 编程》读书笔记</p>
+            </article>
+            <article>
+              <span>03</span>
+              <p>晚饭后记录本周工具订阅支出</p>
+            </article>
+          </div>
+        </aside>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">先解决一个小问题</p>
+          <h2>每天事情很多，但今日计划还是散</h2>
+        </div>
+        <div class="value-grid" data-value-cards></div>
+      </section>
+
+      <section class="section split" id="flow">
+        <div>
+          <p class="eyebrow">第一版流程</p>
+          <h2>先把官网跑起来，再做真正的今日计划生成</h2>
+          <ul class="step-list" data-steps></ul>
+        </div>
+        <div class="proof-box">
+          <h3>当前版本边界</h3>
+          <ul data-proof></ul>
+        </div>
+      </section>
+
+      <section class="section waitlist" id="waitlist">
+        <div class="section-heading">
+          <p class="eyebrow">本地候补表单</p>
+          <h2>留下你最想解决的效率问题</h2>
+          <p>当前页面只做本地校验，不上传远程服务，也不要填写 API Key、密码或密钥。</p>
+        </div>
+        <form data-waitlist-form>
+          <label>
+            称呼
+            <input name="name" placeholder="例如 Ding" autocomplete="name" />
+          </label>
+          <label>
+            邮箱
+            <input name="email" placeholder="you@example.com" autocomplete="email" />
+          </label>
+          <label>
+            你的角色
+            <select name="role">
+              <option value="">请选择</option>
+              <option>效率工具用户</option>
+              <option>独立开发者</option>
+              <option>运营</option>
+              <option>产品经理</option>
+              <option>程序员</option>
+            </select>
+          </label>
+          <label>
+            关注场景
+            <input name="scenario" placeholder="例如 工作计划、读书笔记、个人记账" />
+          </label>
+          <label class="full">
+            现在最卡的效率问题
+            <textarea name="pain" rows="4" placeholder="例如：任务、会议、笔记和账目都散在不同地方，早上不知道先处理哪件事。"></textarea>
+          </label>
+          <button type="submit">加入候补名单</button>
+        </form>
+        <div class="form-result" data-form-result aria-live="polite"></div>
+      </section>
+    </main>
+
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>

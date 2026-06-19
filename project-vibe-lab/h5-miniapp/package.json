@@ -1,0 +1,17 @@
+{
+  "name": "h5-miniapp",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "brief": "node src/cli.js --mode brief",
+    "plan": "node src/cli.js --mode plan",
+    "recommendations": "node src/cli.js --mode recommendations",
+    "favorite": "node src/cli.js --mode favorite",
+    "share": "node src/cli.js --mode share",
+    "publish": "node src/cli.js --mode publish",
+    "prompt": "node src/cli.js --mode prompt",
+    "start": "python3 -m http.server 5176"
+  }
+}

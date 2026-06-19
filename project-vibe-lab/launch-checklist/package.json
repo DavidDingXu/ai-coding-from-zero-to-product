@@ -1,0 +1,17 @@
+{
+  "name": "launch-checklist",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "description": "AI 编程产品上线前 7 道闸：权限、隐私、成本、日志、回滚和证据。",
+  "scripts": {
+    "test": "node --test",
+    "brief": "node src/cli.js --mode brief",
+    "gates": "node src/cli.js --mode gates",
+    "audit": "node src/cli.js --mode audit",
+    "release": "node src/cli.js --mode release",
+    "rollback": "node src/cli.js --mode rollback",
+    "evidence": "node src/cli.js --mode evidence",
+    "prompt": "node src/cli.js --mode prompt"
+  }
+}

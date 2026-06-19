@@ -1,0 +1,16 @@
+{
+  "name": "browser-extension",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "brief": "node src/cli.js --mode brief",
+    "manifest": "node src/cli.js --mode manifest",
+    "capture": "node src/cli.js --mode capture",
+    "card": "node src/cli.js --mode card",
+    "permissions": "node src/cli.js --mode permissions",
+    "prompt": "node src/cli.js --mode prompt",
+    "start": "python3 -m http.server 5177"
+  }
+}

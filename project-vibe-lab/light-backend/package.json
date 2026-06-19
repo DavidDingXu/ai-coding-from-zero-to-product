@@ -1,0 +1,22 @@
+{
+  "name": "light-backend",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "description": "AI 个人效率助手轻量后端：验证数据库、登录和权限什么时候进入项目。",
+  "scripts": {
+    "test": "node --test",
+    "brief": "node src/cli.js --mode brief",
+    "decision": "node src/cli.js --mode decision",
+    "model": "node src/cli.js --mode model",
+    "session": "node src/cli.js --mode session",
+    "save": "node src/cli.js --mode save",
+    "list": "node src/cli.js --mode list",
+    "permissions": "node src/cli.js --mode permissions",
+    "api": "node src/cli.js --mode api",
+    "audit": "node src/cli.js --mode audit",
+    "production": "node src/cli.js --mode production",
+    "prompt": "node src/cli.js --mode prompt",
+    "start": "python3 -m http.server 5180"
+  }
+}

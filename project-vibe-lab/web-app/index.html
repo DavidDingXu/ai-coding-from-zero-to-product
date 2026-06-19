@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI 个人效率助手 Web App</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark">效</span>
+        <span>AI 个人效率助手</span>
+      </div>
+      <nav aria-label="页面导航">
+        <a href="#generator">生成</a>
+        <a href="#cards">行动卡</a>
+        <a href="#saved">本地保存</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Web App 实战</p>
+          <h1>把任务、日程、笔记和账目整理成今日计划</h1>
+          <p data-page-goal>
+            输入任务、日程、笔记和账目，生成 10 张今日行动卡，并支持筛选、复制和本地保存。
+          </p>
+        </div>
+        <aside class="status-panel" aria-label="当前版本边界">
+          <strong>当前版本边界</strong>
+          <ul>
+            <li>本地规则生成，不调用真实模型</li>
+            <li>保存到浏览器本地，不上传远程服务</li>
+            <li>先验证产品流程，再接模型和后端</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section class="workspace" id="generator">
+        <form class="input-panel" data-plan-form>
+          <div class="panel-heading">
+            <p class="eyebrow">输入上下文</p>
+            <h2>先收拢今天的事</h2>
+          </div>
+          <label>
+            场景
+            <input name="domain" value="工作和学习" />
+          </label>
+          <label>
+            目标用户
+            <input name="audience" value="上班族" />
+          </label>
+          <label>
+            今日目标
+            <input name="goal" value="整理今天最该完成的 3 件事" />
+          </label>
+          <label>
+            表达场景
+            <select name="tone">
+              <option>今日计划</option>
+              <option>待办清单</option>
+              <option>读书笔记</option>
+              <option>轻量记账</option>
+            </select>
+          </label>
+          <label class="full">
+            约束
+            <textarea name="constraints" rows="4">先用本地 demo 验证，不接真实模型和数据库</textarea>
+          </label>
+          <button type="submit">生成 10 张行动卡</button>
+        </form>
+
+        <aside class="filter-panel">
+          <div class="panel-heading">
+            <p class="eyebrow">筛选</p>
+            <h2>先找今天最该做的一组</h2>
+          </div>
+          <form data-filter-form>
+            <label>
+              难度
+              <select name="difficulty">
+                <option value="">全部</option>
+                <option value="easy">easy</option>
+                <option value="medium">medium</option>
+                <option value="hard">hard</option>
+              </select>
+            </label>
+            <label>
+              类型
+              <select name="type">
+                <option value="">全部</option>
+                <option value="task">task</option>
+                <option value="schedule">schedule</option>
+                <option value="note">note</option>
+                <option value="budget">budget</option>
+                <option value="checklist">checklist</option>
+              </select>
+            </label>
+            <label>
+              阶段
+              <select name="stage">
+                <option value="">全部</option>
+                <option value="start">start</option>
+                <option value="decision">decision</option>
+                <option value="build">build</option>
+                <option value="improve">improve</option>
+              </select>
+            </label>
+          </form>
+          <p class="summary" data-summary>当前显示 10 张行动卡。</p>
+          <p class="copy-result" data-copy-result aria-live="polite"></p>
+        </aside>
+      </section>
+
+      <section class="action-section" id="cards">
+        <div class="section-heading">
+          <p class="eyebrow">今日行动卡</p>
+          <h2>每条都要能解释为什么今天要做</h2>
+        </div>
+        <div class="action-grid" data-action-card-list></div>
+      </section>
+
+      <section class="saved-section" id="saved">
+        <div class="section-heading">
+          <p class="eyebrow">本地计划记录</p>
+          <h2>先保存，后面再接账号和数据库</h2>
+          <p>这里使用浏览器 localStorage。刷新页面仍然能看到保存结果，但清空浏览器数据后会消失。</p>
+        </div>
+        <div class="saved-actions">
+          <button type="button" class="secondary-button" data-clear-saved>清空本地计划记录</button>
+        </div>
+        <div class="saved-list" data-saved-list></div>
+      </section>
+    </main>
+
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>

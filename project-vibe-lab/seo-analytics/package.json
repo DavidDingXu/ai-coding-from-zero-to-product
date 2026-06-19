@@ -1,0 +1,18 @@
+{
+  "name": "seo-analytics",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "description": "AI 个人效率助手域名、SEO 和访问统计实战：元数据、sitemap、robots、事件埋点和上线后检查。",
+  "scripts": {
+    "test": "node --test",
+    "brief": "node src/cli.js --mode brief",
+    "metadata": "node src/cli.js --mode metadata",
+    "robots": "node src/cli.js --mode robots",
+    "sitemap": "node src/cli.js --mode sitemap",
+    "events": "node src/cli.js --mode events",
+    "audit": "node src/cli.js --mode audit",
+    "checklist": "node src/cli.js --mode checklist",
+    "prompt": "node src/cli.js --mode prompt"
+  }
+}

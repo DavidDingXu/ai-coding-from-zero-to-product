@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI 个人效率助手 H5</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="phone-shell">
+      <header class="app-header">
+        <div class="brand">
+          <span class="brand-mark">效</span>
+          <span>AI 个人效率助手 H5</span>
+        </div>
+        <span class="route-chip">本地 H5</span>
+      </header>
+
+      <section class="hero">
+        <p class="eyebrow">H5 / 小程序形态</p>
+        <h1>把完整工作台压成手机上的 3 条今日行动</h1>
+        <p>适合碎片时间：少输入、少列表、能收藏、能复制给自己或项目群。</p>
+      </section>
+
+      <section class="panel">
+        <div class="panel-heading">
+          <p class="eyebrow">短输入</p>
+          <h2>先收能行动的上下文</h2>
+        </div>
+        <form data-mobile-form>
+          <label>
+            产品
+            <input name="product" value="AI 个人效率助手" />
+          </label>
+          <label>
+            场景
+            <input name="domain" value="工作和学习" />
+          </label>
+          <label>
+            目标用户
+            <input name="audience" value="上班族" />
+          </label>
+          <label>
+            使用场景
+            <input name="scene" value="手机上快速整理" />
+          </label>
+          <label>
+            时间预算
+            <input name="timeBudget" value="10 分钟" />
+          </label>
+          <label>
+            分享目标
+            <input name="publishTarget" value="微信私聊或社群" />
+          </label>
+          <label>
+            今天的材料
+            <textarea name="material" rows="3">今天有 2 个任务、1 个会议和一篇待读文章</textarea>
+          </label>
+          <button type="submit">生成 3 条今日行动</button>
+        </form>
+      </section>
+
+      <p class="feedback" data-feedback aria-live="polite"></p>
+
+      <section class="panel">
+        <div class="panel-heading">
+          <p class="eyebrow">今日行动</p>
+          <h2>移动端只给最该行动的 3 条</h2>
+        </div>
+        <div class="recommendation-list" data-recommendation-list></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-heading">
+          <p class="eyebrow">行动文本</p>
+          <h2>复制到聊天或笔记</h2>
+        </div>
+        <textarea class="share-text" data-share-text rows="7" readonly></textarea>
+      </section>
+
+      <section class="panel">
+        <div class="panel-heading">
+          <p class="eyebrow">本地收藏</p>
+          <h2>先本地保存，后面再接账号</h2>
+        </div>
+        <div class="favorite-list" data-favorite-list></div>
+        <button type="button" class="secondary-button" data-clear-favorites>清空本地收藏</button>
+      </section>
+
+      <section class="panel publish-panel">
+        <div>
+          <p class="eyebrow">发布路径</p>
+          <h2>H5 链接和小程序提审不是一回事</h2>
+        </div>
+        <div class="publish-grid">
+          <article>
+            <h3>H5 先验证</h3>
+            <ul data-h5-checks></ul>
+          </article>
+          <article>
+            <h3>小程序再准备</h3>
+            <ul data-miniapp-checks></ul>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>

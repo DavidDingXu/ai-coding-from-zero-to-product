@@ -1,0 +1,16 @@
+{
+  "name": "web-app",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "brief": "node src/cli.js --mode brief",
+    "generate": "node src/cli.js --mode generate",
+    "filter": "node src/cli.js --mode filter --difficulty easy",
+    "save": "node src/cli.js --mode save",
+    "checklist": "node src/cli.js --mode checklist",
+    "prompt": "node src/cli.js --mode prompt",
+    "start": "python3 -m http.server 5175"
+  }
+}

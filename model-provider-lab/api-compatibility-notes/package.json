@@ -1,0 +1,10 @@
+{
+  "name": "api-compatibility-notes",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "assess": "node src/cli.js",
+    "test": "node --test"
+  }
+}

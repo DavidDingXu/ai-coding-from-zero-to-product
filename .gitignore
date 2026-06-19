@@ -1,0 +1,19 @@
+node_modules/
+
+# 本地归档素材，不进入公开配套项目主线。
+_archive/
+
+.env
+.env.*
+!.env.example
+
+.DS_Store
+*.log
+
+dist/
+build/
+target/
+coverage/
+.next/
+.vite/
+.cache/

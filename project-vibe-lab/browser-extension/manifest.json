@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "AI 读书笔记助手",
+  "version": "1.0.0",
+  "description": "采集当前网页的标题、链接和选中文本，生成网页摘要和读书笔记卡片。",
+  "action": {
+    "default_title": "采集读书笔记",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "src/service-worker.js",
+    "type": "module"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ]
+}

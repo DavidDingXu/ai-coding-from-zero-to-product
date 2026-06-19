@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI 读书笔记助手</title>
+    <link rel="stylesheet" href="./popup.css" />
+  </head>
+  <body>
+    <main class="popup-shell">
+      <header class="popup-header">
+        <div>
+          <p class="eyebrow">浏览器插件 MVP</p>
+          <h1>采集当前网页笔记</h1>
+        </div>
+        <span class="badge">本地保存</span>
+      </header>
+
+      <section class="panel">
+        <p class="hint">只读取当前激活页面，不声明全站访问权限。选中文本会优先作为笔记来源。</p>
+        <button id="captureButton" type="button">采集当前页面</button>
+      </section>
+
+      <section class="panel" aria-live="polite">
+        <h2>读书笔记卡片</h2>
+        <dl class="card">
+          <dt>标题</dt>
+          <dd id="titleText">等待采集</dd>
+          <dt>链接</dt>
+          <dd id="urlText">-</dd>
+          <dt>网页摘要</dt>
+          <dd id="summaryText">选中网页上的一段文字后再点击采集。</dd>
+          <dt>建议下一步</dt>
+          <dd id="nextActionText">把网页内容整理成读书笔记，再提炼 3 个可执行启发。</dd>
+        </dl>
+      </section>
+
+      <section class="panel">
+        <h2>本地记录</h2>
+        <div id="savedList" class="saved-list">暂无记录</div>
+        <button id="clearButton" class="secondary" type="button">清空本地记录</button>
+      </section>
+
+      <footer>
+        <p>生产级插件还要补权限说明、敏感页面排除、数据导出和删除。</p>
+      </footer>
+    </main>
+    <script type="module" src="./src/popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "feedback-loop",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "description": "AI 个人效率助手用户反馈：把原话转成 spec、task 和下一轮验证。",
+  "scripts": {
+    "test": "node --test",
+    "brief": "node src/cli.js --mode brief",
+    "inbox": "node src/cli.js --mode inbox",
+    "classify": "node src/cli.js --mode classify",
+    "extract": "node src/cli.js --mode extract",
+    "spec": "node src/cli.js --mode spec",
+    "tasks": "node src/cli.js --mode tasks",
+    "audit": "node src/cli.js --mode audit",
+    "checklist": "node src/cli.js --mode checklist",
+    "prompt": "node src/cli.js --mode prompt"
+  }
+}

@@ -1,0 +1,267 @@
+:root {
+  color-scheme: light;
+  --ink: #182231;
+  --muted: #657286;
+  --line: #d9e2ee;
+  --paper: #ffffff;
+  --soft: #f4f8fc;
+  --blue: #2563eb;
+  --green: #0f9f6e;
+  --amber: #b7791f;
+  --shadow: 0 18px 50px rgba(24, 39, 75, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #eef4fb;
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  letter-spacing: 0;
+}
+
+.phone-shell {
+  width: min(100%, 460px);
+  min-height: 100vh;
+  margin: 0 auto;
+  background: #f8fbff;
+  box-shadow: 0 0 0 1px rgba(111, 130, 156, 0.16), 0 28px 70px rgba(35, 50, 82, 0.16);
+}
+
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 58px;
+  padding: 0 18px;
+  background: rgba(255, 255, 255, 0.94);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(12px);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: #e8f1ff;
+  color: var(--blue);
+}
+
+.route-chip {
+  border: 1px solid #cfe0f5;
+  border-radius: 999px;
+  padding: 5px 10px;
+  color: #35506e;
+  font-size: 12px;
+  font-weight: 750;
+  background: #f6faff;
+}
+
+.hero {
+  padding: 34px 20px 22px;
+}
+
+.hero h1 {
+  margin: 10px 0 12px;
+  font-size: 38px;
+  line-height: 1.08;
+}
+
+.hero p:not(.eyebrow),
+.panel-heading p,
+.recommendation-card p,
+.quick-action p,
+.favorite-item span,
+.publish-panel li {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.panel {
+  margin: 14px 14px 18px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+  box-shadow: var(--shadow);
+}
+
+.panel-heading h2 {
+  margin: 6px 0 14px;
+  font-size: 24px;
+  line-height: 1.18;
+}
+
+form {
+  display: grid;
+  gap: 12px;
+}
+
+label {
+  display: grid;
+  gap: 7px;
+  color: #2f3b4d;
+  font-size: 14px;
+  font-weight: 750;
+}
+
+input,
+textarea {
+  width: 100%;
+  border: 1px solid #cfd9e6;
+  border-radius: 8px;
+  padding: 12px;
+  color: var(--ink);
+  font: inherit;
+  background: #fff;
+  letter-spacing: 0;
+}
+
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  border: 0;
+  border-radius: 8px;
+  padding: 0 14px;
+  background: var(--blue);
+  color: #fff;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.secondary-button {
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--ink);
+}
+
+.feedback {
+  min-height: 22px;
+  margin: 0 20px;
+  color: var(--green);
+  font-size: 14px;
+  font-weight: 750;
+}
+
+.recommendation-list,
+.favorite-list {
+  display: grid;
+  gap: 12px;
+}
+
+.recommendation-card,
+.favorite-item,
+.publish-grid article {
+  border: 1px solid #e0e8f2;
+  border-radius: 8px;
+  padding: 14px;
+  background: #fbfdff;
+}
+
+.recommendation-topline,
+.card-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: space-between;
+}
+
+.recommendation-topline span {
+  border-radius: 8px;
+  padding: 4px 8px;
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 800;
+  background: #e8f1ff;
+}
+
+.recommendation-card h3 {
+  margin: 12px 0 8px;
+  font-size: 20px;
+  line-height: 1.32;
+}
+
+.quick-action {
+  margin: 12px 0;
+  border-left: 4px solid #c8daf8;
+  padding: 8px 0 8px 12px;
+  background: #f7fbff;
+}
+
+.quick-action span {
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.card-actions {
+  justify-content: flex-start;
+}
+
+.share-text {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.favorite-item {
+  display: grid;
+  gap: 6px;
+}
+
+.empty-state {
+  margin: 0;
+  color: var(--muted);
+}
+
+.publish-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.publish-grid h3 {
+  margin: 0 0 8px;
+}
+
+.publish-grid ul {
+  display: grid;
+  gap: 7px;
+  margin: 0;
+  padding-left: 18px;
+}
+
+@media (min-width: 760px) {
+  body {
+    padding: 28px 0;
+  }
+
+  .phone-shell {
+    border-radius: 28px;
+    overflow: hidden;
+  }
+}
