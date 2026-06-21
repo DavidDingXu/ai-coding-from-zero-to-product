@@ -15,6 +15,7 @@
     "evidence": "node src/cli.js --mode evidence",
     "smoke": "node src/cli.js --mode smoke",
     "rollback": "node src/cli.js --mode rollback",
-    "prompt": "node src/cli.js --mode prompt"
+    "prompt": "node src/cli.js --mode prompt",
+    "verify": "npm test && npm run runbook && npm run smoke && npm run rollback"
   }
 }

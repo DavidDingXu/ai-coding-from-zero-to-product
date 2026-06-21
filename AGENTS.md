@@ -9,6 +9,8 @@ This repository is the runnable companion project for the course. Keep it usable
 - Do not commit real API keys, tokens, cookies, or local machine paths.
 - Keep examples runnable for beginners: include clear commands, expected output, and common failure notes.
 - Every runnable module should include `README.md`, `.env.example` when configuration is needed, and a focused verification command.
+- Mainline learning modules should give beginners a visible first result before asking them to run tests: a page, popup, checklist, dry-run report, matrix, or user path.
+- `npm run verify` is an author/advanced-reader evidence gate. It must not replace the beginner path of opening the visible result and trying one small change.
 - Keep process notes in `process/` so readers can see the idea, spec, prompts, plan, implementation log, verification, and review.
 - For product-practice modules, treat `process/` as the main teaching artifact: record the real requirement development path, not just the commands that prove the result runs.
 - Product-practice requirements must feel like real cases: name the user, scenario, constraints, scope cuts, and next feedback loop. Sanitized or teaching-shaped cases are fine; fake requirements created only to demo CLI output are not.

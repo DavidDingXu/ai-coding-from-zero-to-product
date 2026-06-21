@@ -6,54 +6,12 @@
 
 当前版本不调用真实模型，不做真实小程序上传审核，也不接登录、openid 或云数据库。它交付的是移动端主路径：短输入、3 条推荐、本地收藏、行动文本和发布路径提示。读者可以把同样的方法迁移到自己的产品，先做一个能分享、能验证的移动端版本。
 
-## 快速开始
+## 先看到手机端短流程
 
 进入项目目录：
 
 ```bash
 cd project-vibe-lab/h5-miniapp
-```
-
-运行测试：
-
-```bash
-npm test
-```
-
-查看项目边界：
-
-```bash
-npm run brief
-```
-
-查看移动端行动计划：
-
-```bash
-npm run plan
-```
-
-生成 3 条今日推荐：
-
-```bash
-npm run recommendations
-```
-
-模拟本地收藏：
-
-```bash
-npm run favorite
-```
-
-生成可复制行动文本：
-
-```bash
-npm run share
-```
-
-查看 H5 和小程序发布路径检查项：
-
-```bash
-npm run publish
 ```
 
 打开本地页面：
@@ -67,6 +25,23 @@ npm start
 ```text
 http://127.0.0.1:5176
 ```
+
+页面打开后，先改一次场景、短输入和时间预算，生成 3 条推荐；收藏一条；清空收藏；查看行动文本是否同步变化。
+
+## 再看验证证据
+
+页面主路径跑通后，再用命令确认移动端逻辑、分享文本和发布边界：
+
+```bash
+npm test
+npm run verify
+npm run brief
+npm run plan
+npm run share
+npm run publish
+```
+
+`verify` 会同时跑测试、计划/分享命令和页面关键文案检查。
 
 ## 当前能做什么
 
@@ -126,24 +101,23 @@ h5-miniapp/
 
 ```text
 打开 h5-miniapp 项目。
-先读 README.md、process/02-spec.md 和 test/h5-miniapp.test.js。
+先按 README 打开本地页面，走一遍短输入、3 条推荐、收藏和行动文本。
+再读 process/02-spec.md 和 test/h5-miniapp.test.js。
 本轮目标：把完整 Web App 压缩成移动端 H5 版本。
 请保留短输入、3 条推荐、本地收藏、行动文本和 H5 / 小程序发布路径提示。
 不要接入真实模型、登录、openid、云数据库或真实小程序上传审核。
-完成后运行 npm test、npm run plan、npm run share，并打开页面验证移动端首屏。
+完成后先打开页面验证移动端首屏，再运行 npm run verify。
 ```
 
 ## 给 CLI 读者的任务
 
 ```text
 cd project-vibe-lab/h5-miniapp
-npm test
+npm start
+npm run verify
 npm run plan
 npm run share
-npm start
 ```
-
-页面打开后，改一次场景、短输入和时间预算，生成 3 条推荐；收藏一条；清空收藏；查看行动文本是否同步变化。
 
 ## 怎么改成你的产品
 

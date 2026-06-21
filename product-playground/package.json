@@ -1,0 +1,11 @@
+{
+  "name": "product-playground",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "python3 -m http.server 5172",
+    "test": "node --test",
+    "verify": "npm test && node ../scripts/verify-static-page.mjs --root . --path / --text \"先看到一个能运行的产品\" --text \"把我的想法变成跟练路线\""
+  }
+}

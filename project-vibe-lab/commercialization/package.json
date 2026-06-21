@@ -13,6 +13,7 @@
     "invoice": "node src/cli.js --mode invoice",
     "audit": "node src/cli.js --mode audit",
     "checklist": "node src/cli.js --mode checklist",
-    "prompt": "node src/cli.js --mode prompt"
+    "prompt": "node src/cli.js --mode prompt",
+    "verify": "npm test && npm run plans && npm run meter && npm run checklist"
   }
 }

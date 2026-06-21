@@ -6,19 +6,10 @@
 
 当前版本是 Manifest V3 浏览器插件 MVP。它不做全站爬取，不读取 Cookie、表单、私信和登录态，也不自动上传远程数据库。
 
-## 快速开始
+## 先看到插件弹窗
 
 ```bash
 cd project-vibe-lab/browser-extension
-npm test
-npm run brief
-npm run manifest
-npm run permissions
-```
-
-本地预览弹窗：
-
-```bash
 npm start
 ```
 
@@ -28,7 +19,19 @@ npm start
 http://127.0.0.1:5177/popup.html
 ```
 
-真实安装插件时，在 Chrome 扩展管理页打开“开发者模式”，选择“加载已解压的扩展程序”，目录选择本项目根目录。
+先在本地预览里看素材卡片、权限提示和保存记录。真实安装插件时，在 Chrome 扩展管理页打开“开发者模式”，选择“加载已解压的扩展程序”，目录选择本项目根目录。
+
+## 再看验证证据
+
+弹窗路径跑通后，再用命令确认 Manifest、权限和素材卡片逻辑：
+
+```bash
+npm test
+npm run verify
+npm run brief
+npm run manifest
+npm run permissions
+```
 
 ## 当前能做什么
 
@@ -105,12 +108,13 @@ riskLevel
 
 ```text
 打开 browser-extension 项目。
-先读 README.md、process/02-spec.md、manifest.json 和 test/browser-extension.test.js。
+先按 README 打开 popup.html 预览弹窗，确认素材卡片和权限提示。
+再读 process/02-spec.md、manifest.json 和 test/browser-extension.test.js。
 本轮目标：开发「AI 读书笔记助手」浏览器插件 MVP。
 插件使用 Manifest V3，只声明 activeTab、scripting、storage。
 MVP 只采集当前激活页面的标题、链接、选中文本和描述，生成本地素材卡片。
 不要声明全站 host_permissions，不要采集登录态、Cookie、表单、私信或不可公开内容。
-完成后运行 npm test、npm run manifest、npm run permissions，并打开 popup.html 预览界面。
+完成后先打开 popup.html 预览界面，再运行 npm run verify。
 ```
 
 ## 怎么改成你的产品

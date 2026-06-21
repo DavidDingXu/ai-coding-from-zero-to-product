@@ -14,6 +14,7 @@
     "tasks": "node src/cli.js --mode tasks",
     "audit": "node src/cli.js --mode audit",
     "checklist": "node src/cli.js --mode checklist",
-    "prompt": "node src/cli.js --mode prompt"
+    "prompt": "node src/cli.js --mode prompt",
+    "verify": "npm test && npm run inbox && npm run spec && npm run tasks && npm run checklist"
   }
 }

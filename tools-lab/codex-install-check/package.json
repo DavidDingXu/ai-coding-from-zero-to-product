@@ -6,6 +6,7 @@
   "scripts": {
     "test": "node --test",
     "check": "node src/cli.js",
-    "check:json": "node src/cli.js --json"
+    "check:json": "node src/cli.js --json",
+    "verify": "npm test && npm run check"
   }
 }

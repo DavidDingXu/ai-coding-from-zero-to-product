@@ -10,6 +10,7 @@
     "validate": "node src/cli.js --mode validate",
     "feedback": "node src/cli.js --mode feedback",
     "checklist": "node src/cli.js --mode checklist",
-    "start": "python3 -m http.server 5174"
+    "start": "python3 -m http.server 5174",
+    "verify": "npm test && npm run feedback && node ../../scripts/verify-static-page.mjs --root . --path / --text \"AI 个人效率助手\" --text \"加入候补名单\""
   }
 }

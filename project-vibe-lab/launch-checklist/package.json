@@ -12,6 +12,7 @@
     "release": "node src/cli.js --mode release",
     "rollback": "node src/cli.js --mode rollback",
     "evidence": "node src/cli.js --mode evidence",
-    "prompt": "node src/cli.js --mode prompt"
+    "prompt": "node src/cli.js --mode prompt",
+    "verify": "npm test && npm run gates && npm run audit && npm run evidence"
   }
 }

@@ -11,6 +11,7 @@
     "save": "node src/cli.js --mode save",
     "checklist": "node src/cli.js --mode checklist",
     "prompt": "node src/cli.js --mode prompt",
-    "start": "python3 -m http.server 5175"
+    "start": "python3 -m http.server 5175",
+    "verify": "npm test && npm run generate && npm run filter && node ../../scripts/verify-static-page.mjs --root . --path / --text \"AI 个人效率助手 Web App\" --text \"生成 10 张行动卡\""
   }
 }

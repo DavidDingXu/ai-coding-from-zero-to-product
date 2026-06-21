@@ -6,6 +6,7 @@
   "scripts": {
     "dry-run": "node src/cli.js --dry-run",
     "smoke": "node src/cli.js",
-    "test": "node --test"
+    "test": "node --test",
+    "verify": "npm test && npm run dry-run"
   }
 }

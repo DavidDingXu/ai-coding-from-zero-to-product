@@ -9,6 +9,7 @@
     "smoke:deepseek": "node src/cli.js deepseek",
     "smoke:qwen": "node src/cli.js qwen",
     "dry-run:deepseek": "node src/cli.js deepseek --dry-run",
-    "dry-run:qwen": "node src/cli.js qwen --dry-run"
+    "dry-run:qwen": "node src/cli.js qwen --dry-run",
+    "verify": "npm test && npm run matrix && npm run dry-run:deepseek && npm run dry-run:qwen"
   }
 }

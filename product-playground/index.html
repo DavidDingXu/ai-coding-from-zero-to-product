@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>从想法到产品 Playground</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="workspace">
+        <header class="intro">
+          <div>
+            <p class="label">AI 编程产品跟练入口</p>
+            <h1>先看到一个能运行的产品，再学会把它改成自己的</h1>
+            <p>
+              输入你的想法，生成一条从页面、应用、H5、插件、后端到上线检查的跟练路线。测试和 smoke test 是证据，不是学习的第一眼。
+            </p>
+          </div>
+          <form data-idea-form class="idea-form">
+            <label>
+              我的产品想法
+              <textarea name="idea" rows="3">给独立开发者做一个客户需求整理工具</textarea>
+            </label>
+            <label>
+              目标用户
+              <input name="audience" value="独立开发者" />
+            </label>
+            <button type="submit">把我的想法变成跟练路线</button>
+          </form>
+        </header>
+
+        <section class="summary-panel">
+          <span>学习路径</span>
+          <p data-summary></p>
+        </section>
+
+        <section class="timeline" data-timeline></section>
+
+        <section class="prompt-panel">
+          <div>
+            <p class="label">给 Codex App 的第一条任务</p>
+            <h2>先让 AI 带你看产品结果</h2>
+          </div>
+          <textarea data-prompt rows="7" readonly></textarea>
+        </section>
+      </section>
+    </main>
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>

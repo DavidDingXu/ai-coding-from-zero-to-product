@@ -12,6 +12,7 @@
     "share": "node src/cli.js --mode share",
     "publish": "node src/cli.js --mode publish",
     "prompt": "node src/cli.js --mode prompt",
-    "start": "python3 -m http.server 5176"
+    "start": "python3 -m http.server 5176",
+    "verify": "npm test && npm run plan && npm run share && node ../../scripts/verify-static-page.mjs --root . --path / --text \"AI 个人效率助手 H5\" --text \"生成 3 条今日行动\""
   }
 }

@@ -6,48 +6,12 @@
 
 当前版本不调用真实模型，也不写远程数据库。这样做是为了先把产品主流程、页面交互和验证方式跑稳。后续接 DeepSeek、千问、OpenAI 兼容网关或后端服务时，再替换生成层和保存层。
 
-## 快速开始
+## 先看到 Web App
 
 进入项目目录：
 
 ```bash
 cd project-vibe-lab/web-app
-```
-
-运行测试：
-
-```bash
-npm test
-```
-
-查看项目边界：
-
-```bash
-npm run brief
-```
-
-生成 10 张今日行动卡：
-
-```bash
-npm run generate
-```
-
-筛选低难度行动卡：
-
-```bash
-npm run filter
-```
-
-模拟保存一条行动卡：
-
-```bash
-npm run save
-```
-
-查看检查清单：
-
-```bash
-npm run checklist
 ```
 
 打开本地页面：
@@ -61,6 +25,24 @@ npm start
 ```text
 http://127.0.0.1:5175
 ```
+
+页面打开后，先走一遍用户路径：改一次任务、日程或笔记，生成新的行动卡；筛选 `easy`；复制一条；保存一条；刷新页面确认本地计划记录还在。
+
+## 再看验证证据
+
+页面主路径跑通后，再用命令确认核心逻辑没有被改坏：
+
+```bash
+npm test
+npm run verify
+npm run brief
+npm run generate
+npm run filter
+npm run save
+npm run checklist
+```
+
+`verify` 会同时跑测试、生成/筛选命令和页面关键文案检查。
 
 ## 当前能做什么
 
@@ -121,23 +103,22 @@ web-app/
 
 ```text
 打开 web-app 项目。
-先读 README.md、process/02-spec.md 和 test/plan-app.test.js。
+先按 README 打开本地页面，走一遍生成、筛选、复制和保存路径。
+再读 process/02-spec.md 和 test/plan-app.test.js。
 本轮只做今日计划生成、筛选、复制和本地保存。
 不要接入真实模型、登录、支付或远程数据库。
-完成后运行 npm test、npm run generate、npm run filter，并打开页面验证。
+完成后先打开页面验证，再运行 npm run verify。
 ```
 
 ## 给熟悉终端读者的验证命令
 
 ```text
 cd project-vibe-lab/web-app
-npm test
+npm start
+npm run verify
 npm run generate
 npm run filter
-npm start
 ```
-
-页面打开后，改一次任务、日程或笔记，生成新的行动卡；筛选 `easy`；复制一条；保存一条；刷新页面确认本地计划记录还在。
 
 ## 后续怎么扩展
 

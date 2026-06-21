@@ -11,6 +11,7 @@
     "card": "node src/cli.js --mode card",
     "permissions": "node src/cli.js --mode permissions",
     "prompt": "node src/cli.js --mode prompt",
-    "start": "python3 -m http.server 5177"
+    "start": "python3 -m http.server 5177",
+    "verify": "npm test && npm run manifest && npm run permissions && node ../../scripts/verify-static-page.mjs --root . --path /popup.html --text \"AI 读书笔记助手\" --text \"采集当前页面\""
   }
 }

@@ -13,6 +13,7 @@
     "events": "node src/cli.js --mode events",
     "audit": "node src/cli.js --mode audit",
     "checklist": "node src/cli.js --mode checklist",
-    "prompt": "node src/cli.js --mode prompt"
+    "prompt": "node src/cli.js --mode prompt",
+    "verify": "npm test && npm run metadata && npm run events && npm run checklist"
   }
 }

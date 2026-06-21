@@ -17,6 +17,7 @@
     "audit": "node src/cli.js --mode audit",
     "production": "node src/cli.js --mode production",
     "prompt": "node src/cli.js --mode prompt",
-    "start": "python3 -m http.server 5180"
+    "start": "python3 -m http.server 5180",
+    "verify": "npm test && npm run permissions && npm run api && node ../../scripts/verify-static-page.mjs --root . --path / --text \"AI 个人效率助手轻量后端\" --text \"保存草稿\""
   }
 }
